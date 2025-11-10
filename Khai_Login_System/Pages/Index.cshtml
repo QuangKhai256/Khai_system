@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center mt-5">
+    @if (User.Identity?.IsAuthenticated ?? false)
+    {
+        <h1 class="display-5">Xin chào, @User.Identity!.Name!</h1>
+        <p class="lead">Bạn đã đăng nhập thành công vào hệ thống.</p>
+        <p>Để đăng xuất, hãy sử dụng menu trên cùng bên phải.</p>
+    }
+    else
+    {
+        <h1 class="display-5">Chào mừng đến với hệ thống đăng nhập</h1>
+        <p class="lead">Đăng nhập hoặc tạo tài khoản mới để tiếp tục.</p>
+        <div class="mt-4 d-flex justify-content-center gap-3">
+            <a class="btn btn-primary" asp-page="/Account/Login">Đăng nhập</a>
+            <a class="btn btn-outline-success" asp-page="/Account/Register">Đăng ký</a>
+        </div>
+    }
+</div>

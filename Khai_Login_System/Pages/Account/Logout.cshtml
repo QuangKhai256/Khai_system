@@ -1,0 +1,19 @@
+@page
+@model Khai_Login_System.Pages.Account.LogoutModel
+@{
+    ViewData["Title"] = "Đăng xuất";
+}
+
+<h1 class="text-center mt-4">@ViewData["Title"]</h1>
+
+<div class="row justify-content-center mt-3">
+    <div class="col-md-6">
+        <div class="card shadow-sm p-4 text-center">
+            <p>Bạn có chắc chắn muốn đăng xuất?</p>
+            <form method="post" class="d-inline">
+                <button type="submit" class="btn btn-danger me-2">Đăng xuất</button>
+            </form>
+            <a asp-page="/Index" class="btn btn-outline-secondary">Huỷ</a>
+        </div>
+    </div>
+</div>

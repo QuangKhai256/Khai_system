@@ -1,2 +1,0 @@
-# Khai_system
-ok
